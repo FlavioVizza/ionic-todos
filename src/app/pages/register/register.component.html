@@ -1,0 +1,68 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">{{ "CANCEL" | translate }}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- login form -->
+  <form (ngSubmit)="signUp()" [formGroup]="credentials">
+    <div class="input-group">
+
+      <!-- username -->
+      <div class="form-item">
+        <ion-item>
+          <ion-input type="email" placeholder="{{ 'REGISTER.FIRSTNAME'  | translate }}" formControlName="username" fill="solid"></ion-input>
+        </ion-item>
+        @if (username.touched && username.errors) {
+          <div class="errors">
+            <span>{{ username.errors?.required ? ("LOGIN.FIRSTNAME_REQUIRED"  | translate) : ("LOGIN.FIRSTNAME_INVALID" | translate) }}</span>
+          </div>
+        }
+      </div>
+
+      <!-- email -->
+      <div class="form-item">
+        <ion-item>
+          <ion-input type="email" placeholder="{{ 'LOGIN.EMAIL' | translate }}" formControlName="email" fill="solid"></ion-input>
+        </ion-item>
+        @if (email.touched && email.errors) {
+          <div class="errors">
+            <span>{{ email.errors?.required ? ("LOGIN.EMAIL_REQUIRED"  | translate) : ("LOGIN.EMAIL_INVALID" | translate) }}</span>
+          </div>
+        }
+      </div>
+      
+      <!-- password -->
+      <div class="form-item">
+        <ion-item>
+          <ion-input type="password" placeholder="{{ 'LOGIN.PASSWORD' | translate }}" formControlName="password" fill="solid"></ion-input>
+        </ion-item>
+        @if (password.touched && password.errors) {
+          <div class="errors">
+            <span>{{ password.errors?.required ? ("LOGIN.PASSWORD_REQUIRED"  | translate) : ("LOGIN.PASSWOR_INVALID" | translate) }}</span>
+          </div>
+        }
+      </div>
+      
+      <!-- confirmPassword -->
+      <div class="form-item">
+        <ion-item>
+          <ion-input type="password" placeholder="{{ 'REGISTER.CONFIRM_PASSWORD' | translate }}" formControlName="confirmPassword" fill="solid"></ion-input>
+        </ion-item>
+        @if (confirmPassword.touched && confirmPassword.errors) {
+          <div class="errors">
+            <span>{{ confirmPassword.errors?.required ? ("LOGIN.PASSWORD_REQUIRED"  | translate) : ("LOGIN.PASSWOR_INVALID" | translate) }}</span>
+          </div>
+        }
+      </div>
+    
+    </div>
+  </form>
+</ion-content>
+
+<ion-footer class="ion-padding">
+  <ion-button (click)="signUp()" type="submit" expand="block" [disabled]="!credentials.valid">{{ "LOGIN.REGISTER" | translate }}</ion-button>
+</ion-footer>

@@ -1,0 +1,86 @@
+{
+  "OK": "Ok",
+  "SAVE": "Save",
+  "CANCEL": "Cancel",
+  "CLOSE": "Close",
+  "EDIT": "Edit",
+  "BACK": "Back",
+  "TABS": {
+    "TODOS": "Todos",
+    "SETTINGS": "Settings"
+  },
+  "LANGUAGES": {
+    "EN": "English",
+    "IT": "Italian"
+  },
+  "ERRORS": {
+    "POPUP": {
+      "GENERIC_TITLE": "Error",
+      "GENERIC_MESSAGE": "Sorry, there was an error"
+    }
+  },
+  "LOGIN": {
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "EMAIL_REQUIRED": "Email is required",
+    "EMAIL_INVALID": "Email is invalid",
+    "FIRSTNAME_REQUIRED": "Firstname is required",
+    "FIRSTNAME_INVALID": "Firstname is invalid",
+    "LASTNAME_REQUIRED": "Lastname is required",
+    "LASTNAME_INVALID": "Lastname is invalid",
+    "PASSWORD_REQUIRED": "Password is required",
+    "PASSWOR_INVALID": "Password needs to be 8 characters",
+    "ASK_FOR_SIGNUP": "Don't have an account?",
+    "SIGNIN": "Sign In",
+    "REGISTER": "Register",
+    "POPUP": {
+      "ERROR_HEADER": "Login failed",
+      "ERROR_MESSAGE": "There was an error"
+    }
+  },
+  "REGISTER": {
+    "CONFIRM_PASSWORD": "Confirm password",
+    "FIRSTNAME": "Firstname",
+    "LASTNAME": "Lastname",
+    "POPUP": {
+      "SUCCESS_HEADER": "Registration",
+      "SUCCESS_MESSAGE": "Congratulations, registration was successful, you can now log in",
+      "ERROR_HEADER": "Error",
+      "ERROR_MESSAGE": "We're sorry, an unexpected error occurred, it was not possible to register the new user"
+    }
+  },
+  "HOME": {
+    "TITLE": "Todos",
+    "EMPTY_LIST": "There are no items in the list, add an item using the floating button at the bottom of the page",
+    "POPUP":{
+      "ERROR_HEADER": "Error",
+      "ERROR_MESSAGE": "We're sorry, an error occurred while loading."
+    }
+  },
+  "TODO_DETAILS": {
+    "CREATE": "Create",
+    "UPDATE": "Update",
+    "DELETE": "Delete",
+    "DONE": "Done",
+    "TITLE": "Title",
+    "DESCRIPTION": "Description",
+    "TITLE_PLACEHOLDER": "Enter your title here",
+    "DESCRIPTION_PLACEHOLDER": "Enter your description here",
+    "HELPER_TEXT": "Maximum 30 characters"
+  },
+  "SETTINGS" : "Settings",
+  "MENU_ITEMS": {
+    "DARK_THEME": "Dark Theme",
+    "LANGUAGE": "Language",
+    "LOGOUT": "Logout"
+  },
+  "LOGOUT": {
+    "POPUP": {
+      "HEADER": "Logout",
+      "MESSAGE": "Are you sure you want to quit?"
+    }
+  },
+  "LANGUAGE_MODAL": {
+    "SELECT_LANGUAGE": "Select Language"
+  }
+}

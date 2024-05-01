@@ -1,0 +1,86 @@
+{
+  "OK": "Ok",
+  "SAVE": "Salva",
+  "CLOSE": "Chiudi",
+  "CANCEL": "Annulla",
+  "EDIT": "Modifica",
+  "BACK": "Indietro",
+  "TABS": {
+    "TODOS": "Todos",
+    "SETTINGS": "Impostazioni"
+  },
+  "LANGUAGES": {
+    "EN": "Inglese",
+    "IT": "Italiano"
+  },
+  "ERRORS": {
+    "POPUP": {
+      "GENERIC_TITLE": "Errore",
+      "GENERIC_MESSAGE": "Siamo spiacenti, si è verificato un errore"
+    }
+  },
+  "LOGIN": {
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "EMAIL_REQUIRED": "L'email è obbligatoria",
+    "EMAIL_INVALID": "L'email non è valida",
+    "FIRSTNAME_REQUIRED": "Il nome è obbligatorio",
+    "FIRSTNAME_INVALID": "Il nome non è valido",
+    "LASTNAME_REQUIRED": "Il cognome è obbligatorio",
+    "LASTNAME_INVALID": "Il cognome non è valido",
+    "PASSWORD_REQUIRED": "La Password è obbligatoria",
+    "PASSWOR_INVALID": "La password deve avere almeno 8 caratteri",
+    "ASK_FOR_SIGNUP": "Non hai ancora un account?",
+    "SIGNIN": "Sign In",
+    "REGISTER": "Registrati",
+    "POPUP": {
+      "ERROR_HEADER": "Login fallita",
+      "ERROR_MESSAGE": "C'è stato un errore"
+    }
+  },
+  "REGISTER": {
+    "CONFIRM_PASSWORD": "Ripeti password",
+    "FIRSTNAME": "Nome",
+    "LASTNAME": "Cognome",
+    "POPUP": {
+      "SUCCESS_HEADER": "Registrazione",
+      "SUCCESS_MESSAGE": "Congraturazioni, registrazione è avvenuta con successo, ora è possibile loggarsi",
+      "ERROR_HEADER": "Errore",
+      "ERROR_MESSAGE": "Siamo spiacenti si è verificato un errore imprevisto, non è stato possibile registrare il nuovo utente"
+    }
+  },
+  "HOME": {
+    "TITLE": "Todos",
+    "EMPTY_LIST": "Non ci sono elementi nella lista, aggiungi un elemento con il bottone flottante a fondo pagina",
+    "POPUP":{
+      "ERROR_HEADER": "Error",
+      "ERROR_MESSAGE": "Siamo spiacenti si è verificato un errore durante il caricamento"
+    }
+  },
+  "TODO_DETAILS": {
+    "CREATE": "Crea",
+    "UPDATE": "Aggiorna",
+    "DELETE": "Cancella",
+    "DONE": "Fatto",
+    "TITLE": "Titolo",
+    "DESCRIPTION": "Descrizione",
+    "TITLE_PLACEHOLDER": "Inserisci qui il tuo titolo",
+    "DESCRIPTION_PLACEHOLDER": "Inserisci qui la tua descrizione",
+    "HELPER_TEXT": "Massimo 30 caratteri"
+  },
+  "SETTINGS" : "Impostazioni",
+  "MENU_ITEMS": {
+    "DARK_THEME": "Tema Scuro",
+    "LANGUAGE": "Lingua",
+    "LOGOUT": "Esci"
+  },  
+  "LOGOUT": {
+    "POPUP": {
+      "HEADER": "Logout",
+      "MESSAGE": "Sei sicuro di voler uscire?"
+    }
+  },
+  "LANGUAGE_MODAL": {
+    "SELECT_LANGUAGE": "Seleziona Linguaggio"
+  }
+}

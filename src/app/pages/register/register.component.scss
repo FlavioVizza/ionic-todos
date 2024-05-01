@@ -1,0 +1,35 @@
+form {
+  min-width: 90%;
+
+  .avatar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .avatar ion-avatar{
+    zoom: 3;
+    z-index: 10;
+  }
+
+  .input-group {
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .errors {
+    font-size: small;
+    color: #fff;
+    background: var(--ion-color-danger);
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+
+  .signup {
+    margin-top: 50px;
+    text-align: center;
+  }
+}

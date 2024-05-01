@@ -1,0 +1,30 @@
+.login{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form{
+  min-width: 90%;
+
+  .input-group {
+      border-radius: 5px;
+      overflow: hidden;
+  }
+   
+  .errors {
+      font-size: small;
+      color: #fff;
+      background: var(--ion-color-danger);
+      padding-left: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+  }
+
+  .signup {
+    margin-top: 30px;
+    text-align: center;
+  }
+}

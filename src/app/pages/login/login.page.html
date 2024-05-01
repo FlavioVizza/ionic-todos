@@ -1,0 +1,40 @@
+<ion-content>
+  <div class="login">
+    <!-- login form -->
+    <form (ngSubmit)="login()" [formGroup]="credentials">
+      <div class="input-group">
+        
+        <!-- email -->
+        <div class="form-item">
+          <ion-item>
+            <ion-input type="email" placeholder="{{ 'LOGIN.EMAIL' | translate }}" formControlName="email" fill="solid"></ion-input>
+          </ion-item>
+          @if (email.touched && email.errors) {
+            <div class="errors">
+              <span>{{ email.errors?.required ? ("LOGIN.EMAIL_REQUIRED"  | translate) : ("LOGIN.EMAIL_INVALID" | translate) }}</span>
+            </div>
+          }
+        </div>
+
+        <!-- password -->
+        <div class="form-item">
+          <ion-item>
+            <ion-input type="password" placeholder="{{ 'LOGIN.PASSWORD' | translate }}" formControlName="password" fill="solid"></ion-input>
+          </ion-item>
+          @if (password.touched && password.errors) {
+            <div class="errors">
+              <span>{{ password.errors?.required ? ("LOGIN.PASSWORD_REQUIRED"  | translate) : ("LOGIN.PASSWOR_INVALID" | translate) }}</span>
+            </div>
+          }
+        </div>
+        
+      </div>
+      <!-- buttons -->
+      <ion-button type="submit" expand="block" [disabled]="!credentials.valid">{{ "LOGIN.SIGNIN" | translate }}</ion-button>
+      <div class="signup">
+        {{ "LOGIN.ASK_FOR_SIGNUP" | translate }}
+        <ion-button (click)="goToSignUp()" id="open-modal" color="warning" expand="block">{{ "LOGIN.REGISTER" | translate }}</ion-button>
+      </div>
+    </form>
+  </div>
+</ion-content>

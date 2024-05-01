@@ -1,0 +1,54 @@
+<ion-header [translucent]="false" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="{{ 'BACK' | translate }}"> </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="false" class="ion-padding">
+
+  <!-- title -->
+  <ion-item class="ion-no-padding">
+    <ion-label position="stacked">{{ "TODO_DETAILS.TITLE" | translate }}</ion-label>
+    <ion-input 
+      #title
+      type="text" 
+      [value]="todo.title"
+      placeholder="{{ 'TODO_DETAILS.TITLE_PLACEHOLDER' | translate }}">
+    </ion-input>
+  </ion-item>
+
+  <!-- description -->
+  <ion-item class="ion-no-padding ion-margin-top">
+    <ion-label position="stacked">{{ "TODO_DETAILS.DESCRIPTION" | translate }}</ion-label>
+    <ion-textarea 
+      #textarea
+      type="text"
+      rows="5"
+      [helperText]=" 'TODO_DETAILS.HELPER_TEXT' | translate"
+      [value]="todo.description"
+      [maxlength]="maxlength"
+      placeholder="{{ 'TODO_DETAILS.DESCRIPTION_PLACEHOLDER' | translate }}">
+    </ion-textarea>
+  </ion-item>
+
+  <!-- completed -->
+  @if (mode == 'update') {
+    <ion-list class="ion-margin-vertical">
+      <ion-item lines="none">
+        <ion-toggle #toggle [checked]="todo.completed">{{ "TODO_DETAILS.DONE" | translate }}</ion-toggle>
+      </ion-item>
+    </ion-list>
+  }
+
+  <!-- buttons -->
+  <ion-button class="ion-margin-vertical" [disabled]="! textarea?.value?.length || ! title?.value " expand="block" [color]="mode == 'create' ? 'primary' : 'warning'" (click)="handleFooterButtonClick()">
+    {{ ( mode == 'create' ? 'TODO_DETAILS.CREATE'  : 'TODO_DETAILS.UPDATE' ) | translate }}
+  </ion-button>
+  @if (mode == 'update') {
+    <ion-button expand="block" color="danger" (click)="handleDeleteButtonClick()" class="ion-margin-vertical">
+      {{ "TODO_DETAILS.DELETE" | translate }}
+    </ion-button>
+  }
+
+</ion-content>

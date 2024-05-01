@@ -1,0 +1,76 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-title>{{ "HOME.TITLE" | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" #content  (ionScroll)="onScroll($event)">
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ "HOME.TITLE" | translate }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- refresher -->
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)" [disabled]="refreshDisabled">
+    <ion-refresher-content
+      pullingIcon="arrow-down"
+      refreshingSpinner="circles">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  @if (!todoList()) { <!-- todo list skeleton while loading -->
+    @for (i of [1,2,3]; track $index) {
+    <div>
+      <ion-card class="ion-padding">
+        <ion-card-content>
+          <ion-label class="content">
+            <p>
+              <ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+            </p>
+            <p>
+              <ion-skeleton-text [animated]="true" style="width: 30%;"></ion-skeleton-text>
+            </p>
+          </ion-label>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    }
+  }
+  @else if (todoList()?.length == 0) { <!-- empty todo list display message -->
+    <div>
+      <ion-card>
+        <ion-card-content class="ion-margin">
+          <ion-item lines="none" class="custom-background">
+            {{ 'HOME.EMPTY_LIST' | translate }}
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  }
+  @else{ <!-- todo list -->
+    @for (todo of todoList(); track $index) {
+    <div>
+      <ion-card>
+        <ion-card-content>
+          <ion-item lines="none" (click)="onCreateTodo(todo.todoId)" class="custom-background">
+            <ion-icon [name]="todo.completed ? 'checkmark-circle-outline' : 'radio-button-off-outline'"
+              [color]="todo.completed ? 'success' : 'primary'" class="tile-icon" slot="start">
+            </ion-icon>
+            <ion-label>{{ todo.title }}</ion-label>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    }
+  }
+
+  <!-- fab button -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="onCreateTodo()">
+      <ion-icon name="add-circle-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+</ion-content>

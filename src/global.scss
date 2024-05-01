@@ -35,3 +35,120 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+
+ion-item {
+  --inner-border-width: 0;
+  --border-width: 0;
+  --padding-start	: 0;
+  --inner-padding-end	: 0;
+}
+
+ion-input{
+  --background: #e4e2e2 !important;
+  --placeholder-opacity: 0.5 !important;
+  --padding-start: 10px !important;
+  --border-radius: 5px !important
+}
+
+ion-textarea{
+  --background: #e4e2e2 !important;
+  --placeholder-opacity: 0.5 !important;
+  --padding-start: 10px !important;
+  --border-radius: 5px !important
+}
+
+body.dark {
+  ion-input {
+    --background: #8b8989 !important;
+    --placeholder-opacity: 0.5 !important;
+    --padding-start: 10px !important;
+    --border-radius: 5px !important
+  }
+
+  ion-textarea{
+    --background: #8b8989 !important;
+    --placeholder-opacity: 0.5 !important;
+    --padding-start: 10px !important;
+    --border-radius: 5px !important
+  }
+}
+
+.form-item{
+  min-height: 85px;
+}
+
+
+ion-button{
+  --border-radius: 5px;
+}
+
+.card-content-ios {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+/* Tab bar */
+
+ion-tab-bar {
+  position: relative;
+  border-radius: 25px;
+  bottom: 20px;
+  width: 90%;
+  margin: 5px auto;
+  padding: 5px;
+  box-shadow: var(--fv-box-shadow);
+  --border: none !important;
+}
+
+body.dark {
+  ion-tab-bar {
+    --background: var(--fv-tab-bar-background);
+  }
+}
+
+ion-tab-button {
+  --color: var(--ion-color-medium);
+  --color-selected: var(--ion-color-primary);
+  background: transparent !important;
+
+  &::before {
+    background-color: transparent;
+    display: block;
+    content: "";
+    margin: 0 auto;
+    width: 50px;
+    height: 2px;
+  }
+
+  &.tab-selected::before {
+    background-color: var(--ion-color-primary);
+  }
+}
+
+/* Tab bar End */
+
+/* Footer */
+
+ion-footer {
+  ion-toolbar {
+    --background: transparent;
+    --border-width: 0px 0 0 !important;
+  }
+}
+
+/* Footer End */
+
+/* FAB button */
+
+body.dark {
+  .custom-background {
+    --background: var(--fv-glass-background);
+  }
+}
+
+ion-fab{
+  padding-bottom: 15px;
+}
+
+/* FAB button End */

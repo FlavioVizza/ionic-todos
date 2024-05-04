@@ -69,6 +69,6 @@ testem.log
 .DS_Store
 Thumbs.db
 
-assets/wiki
-assets/images
+docs/wiki
+docs/images
 package-lock.json

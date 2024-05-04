@@ -42,7 +42,6 @@ const addTokenToRequest = (request: HttpRequest<any>, token: string): HttpReques
 const handleTokenRefresh = (request: HttpRequest<any>, next: HttpHandlerFn, authService: AuthService, router: Router): Observable<HttpEvent<any>> => {
   return authService.refreshAccessToken().pipe(
     catchError((error: any) => {
-      console.log(error);
       authService.logout();
       router.navigateByUrl(Routes.Login, { replaceUrl: true });
       return EMPTY;
